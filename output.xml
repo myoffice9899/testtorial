@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on darwin)" generated="2025-01-26T03:37:17.914198" rpa="false" schemaversion="5">
+<suite id="s1" name="Example keyword" source="/Users/peerachet.wir/Desktop/learn/testtorial/Example_keyword.robot">
+<test id="s1-t1" name="TC_01_Example Of Log" line="22">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-26T03:37:17.930328" level="INFO">This is a log message</msg>
+<arg>This is a log message</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-26T03:37:17.930274" elapsed="0.000079"/>
+</kw>
+<tag>Log</tag>
+<status status="PASS" start="2025-01-26T03:37:17.930006" elapsed="0.000406"/>
+</test>
+<test id="s1-t2" name="TC_02_Example Of Sleep" line="25">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.933064" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-26T03:37:17.930576" elapsed="5.003181"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.935295" level="INFO">Test resumed after 5 seconds</msg>
+<arg>Test resumed after 5 seconds</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.934791" elapsed="0.000608"/>
+</kw>
+<tag>Sleep</tag>
+<status status="PASS" start="2025-01-26T03:37:17.930481" elapsed="5.005372"/>
+</test>
+<test id="s1-t3" name="TC_03_Example Of Should Be Equal" line="29">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.937038" level="INFO">@{fruits} = [ Apple | Banana | Cherry ]</msg>
+<var>@{fruits}</var>
+<arg>Apple</arg>
+<arg>Banana</arg>
+<arg>Cherry</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.936764" elapsed="0.000302"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.937434" level="INFO">['Apple', 'Banana', 'Cherry']</msg>
+<arg>${fruits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.937250" elapsed="0.000228"/>
+</kw>
+<tag>Create List</tag>
+<status status="PASS" start="2025-01-26T03:37:22.936225" elapsed="0.001418"/>
+</test>
+<test id="s1-t4" name="TC_04Example Of Should Be Equal" line="34">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>10</arg>
+<arg>10</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.938273" elapsed="0.000192"/>
+</kw>
+<tag>Should Be Equal</tag>
+<status status="PASS" start="2025-01-26T03:37:22.937891" elapsed="0.000719"/>
+</test>
+<test id="s1-t5" name="TC_05_Example Of Should Contain" line="38">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.939338" level="INFO">@{colors} = [ Red | Green | Blue ]</msg>
+<var>@{colors}</var>
+<arg>Red</arg>
+<arg>Green</arg>
+<arg>Blue</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.939139" elapsed="0.000226"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${colors}</arg>
+<arg>Green</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.939600" elapsed="0.000290"/>
+</kw>
+<tag>Should Contain</tag>
+<status status="PASS" start="2025-01-26T03:37:22.938815" elapsed="0.001280"/>
+</test>
+<test id="s1-t6" name="TC_06_Example Of Get Length" line="44">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.941212" level="INFO">@{fruits} = [ Apple | Banana ]</msg>
+<var>@{fruits}</var>
+<arg>Apple</arg>
+<arg>Banana</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.940738" elapsed="0.000513"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.941871" level="INFO">Length is 2.</msg>
+<msg time="2025-01-26T03:37:22.941937" level="INFO">${length} = 2</msg>
+<var>${length}</var>
+<arg>${fruits}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.941648" elapsed="0.000308"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.942300" level="INFO">Length is 2</msg>
+<arg>Length is ${length}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.942120" elapsed="0.000289"/>
+</kw>
+<tag>Get Length</tag>
+<status status="PASS" start="2025-01-26T03:37:22.940352" elapsed="0.002265"/>
+</test>
+<test id="s1-t7" name="TC_07_Example Of Append To List" line="49">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.943271" level="INFO">@{fruits} = [ Apple | Banana ]</msg>
+<var>@{fruits}</var>
+<arg>Apple</arg>
+<arg>Banana</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.943140" elapsed="0.000152"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${fruits}</arg>
+<arg>Mango</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.943435" elapsed="0.000140"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.943801" level="INFO">['Apple', 'Banana', 'Mango']</msg>
+<arg>${fruits}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.943698" elapsed="0.000136"/>
+</kw>
+<tag>Append To List</tag>
+<status status="PASS" start="2025-01-26T03:37:22.942824" elapsed="0.001123"/>
+</test>
+<test id="s1-t8" name="TC_08_Example Of Run Keywords" line="55">
+<kw name="Run Keywords" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.944880" level="INFO">Step 1</msg>
+<arg>Step 1</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.944739" elapsed="0.000181"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.945102" level="INFO">Step 2</msg>
+<arg>Step 2</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.945031" elapsed="0.000105"/>
+</kw>
+<arg>Log</arg>
+<arg>Step 1</arg>
+<arg>AND</arg>
+<arg>Log</arg>
+<arg>Step 2</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.944492" elapsed="0.000689"/>
+</kw>
+<tag>Run Keywords</tag>
+<status status="PASS" start="2025-01-26T03:37:22.944125" elapsed="0.001280"/>
+</test>
+<test id="s1-t9" name="TC_09_Example Of Run Keyword If" line="59">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.946134" level="INFO">${value} = True</msg>
+<var>${value}</var>
+<arg>10 &gt; 5</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.945883" elapsed="0.000269"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.946509" level="INFO">Condition is True</msg>
+<arg>Condition is True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.946448" elapsed="0.000089"/>
+</kw>
+<arg>${value}</arg>
+<arg>Log</arg>
+<arg>Condition is True</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.946299" elapsed="0.000272"/>
+</kw>
+<tag>Run Keyword If</tag>
+<status status="PASS" start="2025-01-26T03:37:22.945611" elapsed="0.001077"/>
+</test>
+<test id="s1-t10" name="TC_10_Example Of Evaluate" line="63">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.947542" level="INFO">${result} = 8</msg>
+<var>${result}</var>
+<arg>5 + 3</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.947079" elapsed="0.000480"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.947758" level="INFO">Result is 8</msg>
+<arg>Result is ${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.947671" elapsed="0.000113"/>
+</kw>
+<tag>Evaluate</tag>
+<status status="PASS" start="2025-01-26T03:37:22.946847" elapsed="0.001031"/>
+</test>
+<test id="s1-t11" name="TC_11_Example Of Read File" line="67">
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2025-01-26T03:37:22.949214" level="INFO" html="true">Getting file '&lt;a href="file:///Users/peerachet.wir/Desktop/learn/testtorial/example.txt"&gt;/Users/peerachet.wir/Desktop/learn/testtorial/example.txt&lt;/a&gt;'.</msg>
+<msg time="2025-01-26T03:37:22.949567" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: '/Users/peerachet.wir/Desktop/learn/testtorial/example.txt'</msg>
+<var>${content}</var>
+<arg>example.txt</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="FAIL" start="2025-01-26T03:37:22.948762" elapsed="0.001156">FileNotFoundError: [Errno 2] No such file or directory: '/Users/peerachet.wir/Desktop/learn/testtorial/example.txt'</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-01-26T03:37:22.950258" elapsed="0.000034"/>
+</kw>
+<tag>Read File</tag>
+<status status="FAIL" start="2025-01-26T03:37:22.948507" elapsed="0.002127">FileNotFoundError: [Errno 2] No such file or directory: '/Users/peerachet.wir/Desktop/learn/testtorial/example.txt'</status>
+</test>
+<test id="s1-t12" name="TC_12_Example Of Write To File" line="71">
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2025-01-26T03:37:22.952214" level="INFO" html="true">Created file '&lt;a href="file:///Users/peerachet.wir/Desktop/learn/testtorial/example.txt"&gt;/Users/peerachet.wir/Desktop/learn/testtorial/example.txt&lt;/a&gt;'.</msg>
+<arg>example.txt</arg>
+<arg>Hello, Robot Framework!</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.951282" elapsed="0.000981"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.952456" level="INFO">Content written</msg>
+<arg>Content written</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.952369" elapsed="0.000112"/>
+</kw>
+<tag>Write To File</tag>
+<status status="PASS" start="2025-01-26T03:37:22.950905" elapsed="0.001687"/>
+</test>
+<test id="s1-t13" name="TC_13_Example Of Get From Dictionary" line="75">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.953256" level="INFO">&amp;{person} = { name=John | age=30 }</msg>
+<var>&amp;{person}</var>
+<arg>name=John</arg>
+<arg>age=30</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.952961" elapsed="0.000316"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-26T03:37:22.953551" level="INFO">${name} = John</msg>
+<var>${name}</var>
+<arg>${person}</arg>
+<arg>name</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.953401" elapsed="0.000168"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.953775" level="INFO">Name: John</msg>
+<arg>Name: ${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.953681" elapsed="0.000121"/>
+</kw>
+<tag>Get From Dictionary</tag>
+<status status="PASS" start="2025-01-26T03:37:22.952731" elapsed="0.001180"/>
+</test>
+<test id="s1-t14" name="TC_14_Example Of Dictionary Should Contain Key" line="80">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.954591" level="INFO">&amp;{person} = { name=John | age=30 }</msg>
+<var>&amp;{person}</var>
+<arg>name=John</arg>
+<arg>age=30</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.954320" elapsed="0.000298"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${person}</arg>
+<arg>name</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.954861" elapsed="0.000145"/>
+</kw>
+<tag>Example Of Dictionary Should Contain Key</tag>
+<status status="PASS" start="2025-01-26T03:37:22.954060" elapsed="0.001144"/>
+</test>
+<test id="s1-t15" name="TC_15_Wait Example" line="84">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${1}</arg>
+<arg>${1}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.955976" elapsed="0.000469"/>
+</kw>
+<arg>5 times</arg>
+<arg>1 second</arg>
+<arg>Should Be Equal</arg>
+<arg>${1}</arg>
+<arg>${1}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.955784" elapsed="0.000709"/>
+</kw>
+<tag>Wait Until Keyword Succeeds</tag>
+<status status="PASS" start="2025-01-26T03:37:22.955511" elapsed="0.001087"/>
+</test>
+<test id="s1-t16" name="TC_16_Run Multiple Keywords" line="87">
+<kw name="Run Keywords" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.957103" level="INFO">First Keyword</msg>
+<arg>First Keyword</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.957039" elapsed="0.000097"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.957262" level="INFO">Second Keyword</msg>
+<arg>Second Keyword</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.957208" elapsed="0.000077"/>
+</kw>
+<arg>Log</arg>
+<arg>First Keyword</arg>
+<arg>AND</arg>
+<arg>Log</arg>
+<arg>Second Keyword</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.956934" elapsed="0.000384"/>
+</kw>
+<tag>Run Keywords</tag>
+<status status="PASS" start="2025-01-26T03:37:22.956726" elapsed="0.000685"/>
+</test>
+<test id="s1-t17" name="TC_17_Custom Keyword Example" line="90">
+<kw name="Greet User">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-26T03:37:22.957892" level="INFO">Hello, Robot Framework</msg>
+<arg>Hello, ${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-26T03:37:22.957847" elapsed="0.000058"/>
+</kw>
+<arg>Robot Framework</arg>
+<status status="PASS" start="2025-01-26T03:37:22.957703" elapsed="0.000225"/>
+</kw>
+<tag>Custom Keyword</tag>
+<status status="PASS" start="2025-01-26T03:37:22.957507" elapsed="0.000466"/>
+</test>
+<status status="FAIL" start="2025-01-26T03:37:17.914613" elapsed="5.043547"/>
+</suite>
+<statistics>
+<total>
+<stat pass="16" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Append To List</stat>
+<stat pass="1" fail="0" skip="0">Create List</stat>
+<stat pass="1" fail="0" skip="0">Custom Keyword</stat>
+<stat pass="1" fail="0" skip="0">Evaluate</stat>
+<stat pass="1" fail="0" skip="0">Example Of Dictionary Should Contain Key</stat>
+<stat pass="1" fail="0" skip="0">Get From Dictionary</stat>
+<stat pass="1" fail="0" skip="0">Get Length</stat>
+<stat pass="1" fail="0" skip="0">Log</stat>
+<stat pass="0" fail="1" skip="0">Read File</stat>
+<stat pass="1" fail="0" skip="0">Run Keyword If</stat>
+<stat pass="2" fail="0" skip="0">Run Keywords</stat>
+<stat pass="1" fail="0" skip="0">Should Be Equal</stat>
+<stat pass="1" fail="0" skip="0">Should Contain</stat>
+<stat pass="1" fail="0" skip="0">Sleep</stat>
+<stat pass="1" fail="0" skip="0">Wait Until Keyword Succeeds</stat>
+<stat pass="1" fail="0" skip="0">Write To File</stat>
+</tag>
+<suite>
+<stat pass="16" fail="1" skip="0" id="s1" name="Example keyword">Example keyword</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

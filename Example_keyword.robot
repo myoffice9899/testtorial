@@ -2,27 +2,7 @@
 Library    Collections
 Library    OperatingSystem
 Library    BuiltIn
-*** Variables ***
-${NAME}      Alice
-@{FRUITS}    Apple    Banana    Orange
-&{PERSON}    name=John    age=30
-@{COLORS}    Red    Blue    Green
-@{NESTED_LIST}    @{ROW1}    @{ROW2}
-@{ROW1}           1    2    3
-@{ROW2}           4    5    6
-&{COUNTRY_CODES}    US=1    UK=44    IN=91
-${FIRST_NAME}    Alice
-${LAST_NAME}     Johnson
-${AGE}    18
-${VALUE}    10
-@{NUMBERS}    1    2    3
-&{STUDENT}    name=Tom    scores=&{SCORES}
-&{SCORES}     math=90    science=85
-${EMPTY}    None
-@{EMPLOYEES}    &{EMP1}    &{EMP2}
-&{EMP1}         name=John    age=30
-&{EMP2}         name=Jane    age=28
-@{COLORS}    Red    Blue    Green
+
 
 
 *** Keywords ***
